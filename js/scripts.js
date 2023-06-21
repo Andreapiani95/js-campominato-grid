@@ -2,8 +2,9 @@ document.getElementById('grid-generator').addEventListener('click',
     function (){
         createGrid(100);
     }
-   
 );
+
+
 
 
 function createGrid(cellNumber){
@@ -12,6 +13,12 @@ function createGrid(cellNumber){
         gridCell.append(i);
         gridCell.classList.add('flex-cell');
         document.querySelector('.grid').append(gridCell);
+        gridCell.addEventListener('click', function(){
+            this.classList.toggle('selected')
+            console.log(this.innerHTML)
+        });
     };
 }
+
+
     
